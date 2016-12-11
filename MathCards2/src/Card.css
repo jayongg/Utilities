@@ -1,0 +1,29 @@
+.card {
+	min-width: 60px;
+	/*background-color: red;*/
+	display: -ms-grid;
+    -ms-grid-columns: auto auto;
+	-ms-grid-rows: auto auto auto;
+	margin: 0 20px 80px;
+	text-align: right;
+}
+
+.card .operand {
+    -ms-grid-column: 2;
+}
+.card .operator {
+	-ms-grid-column: 1;
+    -ms-grid-row:2;
+}
+
+.card .bottom {
+    -ms-grid-row: 2;
+}
+
+.card .line {
+	width: 100%;
+	border-bottom: solid #000000;
+	border-bottom-width: 1px;
+    -ms-grid-column-span: 2;
+    -ms-grid-row:3;
+}
