@@ -1,10 +1,10 @@
 .card {
 	min-width: 60px;
-	/*background-color: red;*/
+	height: 150px;
 	display: -ms-grid;
     -ms-grid-columns: auto auto;
 	-ms-grid-rows: auto auto auto;
-	margin: 0 20px 90px;
+	margin: 0 20px;
 	text-align: right;
 }
 
@@ -14,6 +14,7 @@
 .card .operator {
 	-ms-grid-column: 1;
     -ms-grid-row:2;
+	margin-right: 2px;
 }
 
 .card .bottom {
