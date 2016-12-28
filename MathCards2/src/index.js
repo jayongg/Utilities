@@ -4,6 +4,6 @@ import Cards from './Cards';
 import './index.css';
 
 ReactDOM.render(
-  <Cards />,
+  <Cards horizTable="true"/>,
   document.getElementById('root')
 );
