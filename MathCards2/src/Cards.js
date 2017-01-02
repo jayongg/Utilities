@@ -24,9 +24,14 @@ class Cards extends Component {
 
           var operator = '+';
           var operand2 = Math.floor(Math.random() * 9) + 1;
-          if (Math.random() > 1) {
-              operator = '-';
-              operand2 = Math.floor(Math.random() * operand1) + 1;
+
+          if (this.props.muliplicationOnly) {
+            operator = 'x';
+          } else {
+            if (Math.random() > 1) {
+                operator = '-';
+                operand2 = Math.floor(Math.random() * operand1) + 1;
+            }
           }
         
           cards.push(<Card key={i} operand1={operand1} operand2={operand2} operator={operator}/>);

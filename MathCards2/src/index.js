@@ -4,7 +4,8 @@ import Cards from './Cards';
 import './index.css';
 
 ReactDOM.render(
-  // <Cards horizTable="true"/>,
-  <Cards twooverone="true"/>,
+  <Cards horizTable="true"/>,
+  // <Cards twooverone="true" muliplicationOnly="true" />,
+  // <Cards />,
   document.getElementById('root')
 );
