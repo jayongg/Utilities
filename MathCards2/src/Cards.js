@@ -25,7 +25,7 @@ class Cards extends Component {
           var operator = '+';
           var operand2 = Math.floor(Math.random() * 9) + 1;
 
-          if (this.props.muliplicationOnly) {
+          if (this.props.multiplicationOnly) {
             operator = 'x';
           } else {
             if (Math.random() > 1) {

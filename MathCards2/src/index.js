@@ -5,7 +5,7 @@ import './index.css';
 
 ReactDOM.render(
   <Cards horizTable="true"/>,
-  // <Cards twooverone="true" muliplicationOnly="true" />,
+  // <Cards twooverone="true" multiplicationOnly="true" />,
   // <Cards />,
   document.getElementById('root')
 );
