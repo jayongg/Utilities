@@ -57,16 +57,20 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
     for (let index = 0; index < byteData.length; ++index) {
       currentRow.push(<SpriteByte byte={byteData[index]} />)
       if (index % this.state.bytesPerRow === this.state.bytesPerRow - 1) {
-        rows.push(<div style={{ width: "100%", backgroundColor: "green" }}>{currentRow}</div>);
+        rows.push(<div className="App-row">{currentRow}</div>);
         currentRow = [];
       }
+    }
+    // print out any leftover currentRow that wasn't rendered
+    if (currentRow.length) {
+      rows.push(<div className="App-row">{currentRow}</div>);
     }
 
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Sprite Generator</h1>
+          <div>Please enter your data bytes</div>
         </header>
         <div style={{ display: "flex", marginTop: "30px" }}>
           <div style={{ width: "50%", backgroundColor: "yellow" }}>
