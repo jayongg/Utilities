@@ -6,18 +6,26 @@ import logo from './logo.svg';
 
 class App extends React.Component<{}, { bytesPerRow: number, dataValues: string }> {
   /*
+  // dog cat
   private byteData = [
-    30,
-    50,
-    90,
-
-    100,
-    34,
-    130,
-
-    255,
-    255,
-    254
+      0,0,0,
+      0,1,248,
+      0,1,104,
+      0,1,248,
+      0,1,8,
+      112,1,88,
+      208,1,40,
+      144,1,88,
+      224,1,248,
+      123,255,224,
+      46,0,32,
+      2,0,32,
+      3,255,224,
+      1,36,128,
+      1,36,128,
+      1,36,128,
+      1,36,128,
+      3,255,192
   ];
 */
   private byteData = []
