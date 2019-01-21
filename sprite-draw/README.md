@@ -3,3 +3,5 @@ Sprite Draw - enter a json array, indicate the bytes per row, and see your sprit
 For devs: 
 **npm run start** will run this on your local box. 
 **npm run build** will build a production build
+
+See the App.tsx file for a couple of examples you can copy/paste in.
