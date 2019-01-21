@@ -7,7 +7,7 @@ import logo from './logo.svg';
 class App extends React.Component<{}, { bytesPerRow: number, dataValues: string }> {
   /*
   // dog cat
-  private byteData = [
+  [
       0,0,0,
       0,1,248,
       0,1,104,
@@ -26,7 +26,7 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
       1,36,128,
       1,36,128,
       3,255,192
-  ];
+  ]
 
   // fuzzy wuzzy cat
   [
@@ -97,11 +97,15 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
     }
     // print out any leftover currentRow that wasn't rendered
     if (currentRow.length) {
+      // fill the row with 0's
+      for (let index = currentRow.length; index < this.state.bytesPerRow; ++index) {
+        currentRow.push(<SpriteByte byte={0} />);
+      }
       rows.push(<div className="App-row">{currentRow}</div>);
     }
 
     return (
-      <div className="App">
+      <div className="App" >
         <header className="App-header">
           <h1 className="App-title">Sprite Draw</h1>
           <div>Please enter your data bytes below</div>
@@ -109,7 +113,7 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
         <div style={{ display: "flex", marginTop: "30px" }}>
           <div style={{ width: "50%", backgroundColor: "yellow" }}>
             <div>Bytes Per Row:
-               <input onChange={this.handleBytesPerRowUpdate.bind(this)} defaultValue={this.state.bytesPerRow.toString()}/>
+               <input onChange={this.handleBytesPerRowUpdate.bind(this)} defaultValue={this.state.bytesPerRow.toString()} />
             </div>
             <textarea name="body"
               style={{ height: "600px", width: "80%" }}
