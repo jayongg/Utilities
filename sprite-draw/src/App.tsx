@@ -69,8 +69,8 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Sprite Generator</h1>
-          <div>Please enter your data bytes</div>
+          <h1 className="App-title">Sprite Draw</h1>
+          <div>Please enter your data bytes below</div>
         </header>
         <div style={{ display: "flex", marginTop: "30px" }}>
           <div style={{ width: "50%", backgroundColor: "yellow" }}>
