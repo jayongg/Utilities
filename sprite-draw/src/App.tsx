@@ -20,7 +20,7 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
     254
   ];
 */
-  private byteData = [ ]
+  private byteData = []
 
   constructor() {
     super({});
@@ -70,11 +70,13 @@ class App extends React.Component<{}, { bytesPerRow: number, dataValues: string 
         </header>
         <div style={{ display: "flex", marginTop: "30px" }}>
           <div style={{ width: "50%", backgroundColor: "yellow" }}>
-            <div>Bytes Per Row: <input onChange={this.handleBytesPerRowUpdate.bind(this)} /></div>
+            <div>Bytes Per Row:
+               <input onChange={this.handleBytesPerRowUpdate.bind(this)} defaultValue={this.state.bytesPerRow.toString()}/>
+            </div>
             <textarea name="body"
               style={{ height: "600px", width: "80%" }}
               onChange={this.handleTextUpdate.bind(this)}
-              defaultValue = "[\n\n]" />
+              defaultValue={"[\n\n\n\n\n\n]"} />
           </div>
           <div style={{ width: "50%" }}>
             {rows}
